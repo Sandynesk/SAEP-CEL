@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 150px;
+    background-color: rgb(108, 189, 87);
+    width: 400px;
+    height: 600px;
+    border-radius: 10px;
+}
+
+.container h1 {
+    font-weight: bold; /* Fonte em negrito */
+    color: rgb(178, 255, 155); /* Cor suave de verde */
+    
+    /* Efeito de brilho suave e bem fraco */
+    text-shadow: 0 0 2px #000000, 0 0 4px #5eff2e, 0 0 6px #000000;
+    
+    /* Animação de brilho suave e fraco */
+    animation: glow 3s infinite alternate;
+}
+
+.form-cadastro div input {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc; /* Cor da borda padrão */
+    border-radius: 5px;
+    outline: none;
+    background-color: #f9f9f9; /* Cor de fundo suave */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Efeito suave de transição */
+}
+
+/* Estilo para quando o campo de entrada é focado (clicado) */
+.form-cadastro div input:focus {
+    border-color: #4CAF50; /* Cor da borda ao focar */
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.5); /* Brilho suave ao redor do input */
+    background-color: #fff; /* Mudança de cor de fundo ao focar */
+}
+
+/* Estilizando os labels para um melhor layout */
+.form-cadastro div label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333; /* Cor do texto do label */
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+/* Botão de submit */
+button {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white; /* Cor do texto */
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Efeito de hover no botão */
+button:hover {
+    background-color: #45a049; /* Cor mais escura ao passar o mouse */
+}

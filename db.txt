@@ -1,0 +1,17 @@
+CREATE DATABASE SAEPDB;
+USE SAEPDB;
+
+CREATE TABLE cadastro (
+    id INT AUTO_INCREMENT PRIMARY KEY,   -- Chave primária que incrementa automaticamente
+    nome VARCHAR(255) NOT NULL,           -- Coluna para armazenar o nome (máximo de 255 caracteres)
+    email VARCHAR(255) NOT NULL UNIQUE,   -- Coluna para armazenar o email (com restrição de valor único)
+    idade INT NOT NULL,                   -- Coluna para armazenar a idade (tipo inteiro)
+    endereco VARCHAR(255) NOT NULL,       -- Coluna para armazenar o endereço
+    cidade VARCHAR(255) NOT NULL          -- Coluna para armazenar a cidade
+);
+
+
+
+SELECT * FROM cadastro;
+ALTER TABLE cadastro
+CHANGE COLUMN cidade senha VARCHAR(255) NOT NULL;
