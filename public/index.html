@@ -1,40 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prova - SAEP</title>
-    <link rel="stylesheet" href="index.css">
+    <title>Cadastro - SAEP</title>
+    <link rel="stylesheet" href="index.css"> <!-- Link para o seu CSS -->
 </head>
 <body>
-    <div class="container">
-        <h1>Prova - SAEP</h1>
+    <div class="login-container">
+        <h1>Cadastro</h1>
         <form id="form-cadastro" class="form-cadastro" method="post" action="/cadastro">
             <div>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
             </div>
             <div>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
             </div>
             <div>
-                <label for="idade">Idade:</label>
-                <input type="number" id="idade" name="idade" required>
+                <label for="idade">Idade</label>
+                <input type="number" id="idade" name="idade" required placeholder="Digite sua idade">
             </div>
             <div>
-                <label for="endereco">Endereço:</label>
-                <input type="text" id="endereco" name="endereco" required>
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" name="endereco" required placeholder="Digite seu endereço">
             </div>
             <div>
-                <label for="cidade">Senha:</label>
-                <input type="text" id="senha" name="senha" required>
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
             </div>
             <button type="submit">Cadastrar</button>
         </form>
     </div>
-    
-
-
 </body>
 </html>

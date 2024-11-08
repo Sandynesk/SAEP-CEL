@@ -1,76 +1,68 @@
 body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-
+    background-color: #10009e; /* Cor de fundo da página */
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 150px;
-    background-color: rgb(108, 189, 87);
-    width: 400px;
-    height: 600px;
-    border-radius: 10px;
+.login-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
 }
 
-.container h1 {
-    font-weight: bold; /* Fonte em negrito */
-    color: rgb(178, 255, 155); /* Cor suave de verde */
-    
-    /* Efeito de brilho suave e bem fraco */
-    text-shadow: 0 0 2px #000000, 0 0 4px #5eff2e, 0 0 6px #000000;
-    
-    /* Animação de brilho suave e fraco */
-    animation: glow 3s infinite alternate;
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-.form-cadastro div input {
-    width: 90%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 2px solid #ccc; /* Cor da borda padrão */
-    border-radius: 5px;
-    outline: none;
-    background-color: #f9f9f9; /* Cor de fundo suave */
-    font-size: 16px; /* Tamanho da fonte */
-    transition: border-color 0.3s, box-shadow 0.3s; /* Efeito suave de transição */
-}
-
-/* Estilo para quando o campo de entrada é focado (clicado) */
-.form-cadastro div input:focus {
-    border-color: #4CAF50; /* Cor da borda ao focar */
-    box-shadow: 0 0 8px rgba(76, 175, 80, 0.5); /* Brilho suave ao redor do input */
-    background-color: #fff; /* Mudança de cor de fundo ao focar */
-}
-
-/* Estilizando os labels para um melhor layout */
-.form-cadastro div label {
+label {
     font-size: 14px;
-    font-weight: bold;
-    color: #333; /* Cor do texto do label */
-    margin-bottom: 5px;
-    display: inline-block;
+    color: #666;
+    margin-bottom: 6px;
+    display: block;
 }
 
-/* Botão de submit */
+input {
+    width: 94%;
+    padding: 10px;
+    margin: 8px 0 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
 button {
-    background-color: #4CAF50; /* Cor de fundo verde */
-    color: white; /* Cor do texto */
+    width: 100%;
+    padding: 12px;
+    background-color: #020086; /* Cor do botão */
+    color: white;
+    font-size: 16px;
     border: none;
     border-radius: 5px;
-    padding: 12px 20px;
-    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-/* Efeito de hover no botão */
 button:hover {
-    background-color: #45a049; /* Cor mais escura ao passar o mouse */
+    background-color: #100058; /* Cor do botão no hover */
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    margin-top: 10px;
+    color: #555;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
 }
