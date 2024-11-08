@@ -32,7 +32,7 @@ app.listen(port, () => {
 
 // Rotas para os endpoints
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'Home.html'));
 });
 
 app.get('/login', (req, res) => {
