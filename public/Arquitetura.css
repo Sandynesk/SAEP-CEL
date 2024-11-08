@@ -1,0 +1,116 @@
+nav.navbar-custom .navbar-brand {
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff; /* Cor do texto */
+}
+
+
+.navbar-custom{
+    background-color: #180997;
+
+}
+
+
+
+#carouselExample {
+    max-height: 400px; /* Defina a altura desejada */
+    overflow: hidden; /* Esconde qualquer parte da imagem que exceda a área do carrossel */
+  }
+  
+  #carouselExample .carousel-inner {
+    height: 100%; /* Garante que a área do carrossel ocupe 100% da altura */
+  }
+  
+  #carouselExample .carousel-item img {
+    width: 100%; /* Ajusta a largura da imagem para 100% */
+    height: 100%; /* Ajusta a altura para 100% */
+    object-fit: cover; /* Mantém a proporção da imagem e cobre o espaço disponível sem distorção */
+  }
+  
+
+
+
+/* Estilo para o container do título e do botão */
+.Texto-titulo {
+    text-align: center; /* Centraliza o texto */
+    max-width: 800px; /* Limita a largura máxima para melhorar o layout */
+    padding: 20px; /* Espaçamento interno */
+    text-align: left;
+    margin-left: auto; /* Centraliza o conteúdo à esquerda */
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;    
+}
+
+/* Estilo do título */
+.Texto-titulo h2 {
+    font-size: 2.5rem; /* Tamanho do título */
+    font-weight: bold;
+    color: #180997; /* Cor do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Estilo do parágrafo */
+.Texto-titulo p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px; /* Espaçamento abaixo dos parágrafos */
+}
+
+/* Estilo do botão personalizado */
+
+/* Estilo do botão personalizado */
+.btn-custom {
+    align-items: center;
+    background-image: linear-gradient(144deg, #080077, #3425ff 50%, #002beb); /* Gradiente azul */
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #ffffff; /* Texto branco */
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Efeito do botão ao passar o mouse (hover) */
+.btn-custom:hover {
+    background-color: #4d36d1; /* Um tom mais escuro de azul no hover */
+}
+
+.btn-custom:hover span {
+    background: none; /* O fundo do texto desaparece ao passar o mouse */
+}
+
+/* Efeito de clique (active) */
+.btn-custom:active {
+    transform: scale(0.9); /* Dá um efeito de "pressionado" no botão */
+}
+
+/* Estilo do span dentro do botão */
+.btn-custom span {
+    background-color: rgb(5, 6, 45); /* Cor do fundo inicial */
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms; /* Transição suave */
+}
+
+/* Efeito quando o botão estiver em foco */
+.btn-custom:focus {
+    outline: none; /* Remove o contorno de foco */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6); /* Efeito de brilho sutil */
+}
+
