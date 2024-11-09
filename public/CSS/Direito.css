@@ -437,3 +437,10 @@ textarea.form-control {
     background-color: #0a0061 !important;  /* Cor verde com !important */
     border-radius: 5px;
 }
+
+.container-fluid span{
+   color: #ffffff;
+   font-size: 20px;
+   font-weight: 600;
+
+}

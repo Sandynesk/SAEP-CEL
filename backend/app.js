@@ -31,6 +31,12 @@ app.get('/', (req, res) => {
     res.render('home', { usuario });  // Passa o objeto `usuario` para a view EJS
 });
 
+app.get('/direito', (req, res) => {
+    const usuario = req.session.usuario || null;  // Obtém o usuário da sessão ou `null` se não houver usuário logado
+    res.render('Direito', { usuario });
+});
+
+
 // Rota para a página de cadastro
 app.get('/cadastro', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/html', 'Cadastro.html'));  // Ajuste o caminho para o cadastro
