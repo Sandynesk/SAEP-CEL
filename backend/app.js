@@ -3,6 +3,7 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 const path = require('path');
 const authRoutes = require('./routes/authRoutes'); // Importando as rotas de autenticação
+const postRoutes = require('./routes/postRoutes');
 
 const app = express();
 const port = 3001;
@@ -49,6 +50,7 @@ app.get('/login', (req, res) => {
 
 // Usar as rotas de autenticação para login e cadastro
 app.use(authRoutes);  // Isso permite que as rotas definidas em authRoutes sejam usadas no app
+app.use('/posts', postRoutes);
 
 // Iniciar o servidor
 app.listen(port, () => {

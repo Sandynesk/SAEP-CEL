@@ -1,33 +1,24 @@
-const db = require('../config/db');
-const jwt = require('jsonwebtoken');
+// backend/controllers/postController.js
+const postQueries = require('../models/PostsModel');
 
-// Função para criar post
-exports.criarPost = (req, res) => {
-    const { title, content } = req.body;
+const criarPost = (req, res) => {
+  const { title, content, author_id } = req.body;
+  
+  // Verifica se os parâmetros obrigatórios foram enviados
+  if (!title || !content || !author_id) {
+    return res.status(400).json({ message: 'Faltando parâmetros obrigatórios' });
+  }
 
-    if (!title || !content) {
-        return res.status(400).json({ message: 'Título e conteúdo são obrigatórios!' });
-    }
-
-    const token = req.headers['authorization']?.split(' ')[1]; // Obtém o token
-
-    if (!token) {
-        return res.status(401).json({ message: 'Token não fornecido. Você precisa estar logado.' });
-    }
-
-    jwt.verify(token, 'seu-segredo-aqui', (err, decoded) => {
-        if (err) {
-            return res.status(401).json({ message: 'Token inválido ou expirado.' });
-        }
-
-        const userId = decoded.userId;
-        const query = 'INSERT INTO posts (title, content, author_id) VALUES (?, ?, ?)';
-        db.query(query, [title, content, userId], (err, result) => {
-            if (err) {
-                return res.status(500).json({ message: 'Erro ao criar o post.', error: err });
-            }
-
-            res.status(201).json({ message: 'Post criado com sucesso!', postId: result.insertId });
-        });
+  // Cria o post usando a função de inserção
+  postQueries.createPost(title, content, author_id)
+    .then((result) => {
+      res.status(201).json({ message: 'Post criado com sucesso', result });
+    })
+    .catch((err) => {
+      res.status(500).json({ message: 'Erro ao criar post', error: err });
     });
+};
+
+module.exports = {
+  criarPost,
 };
