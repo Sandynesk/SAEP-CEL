@@ -15,7 +15,7 @@
                 <img src="/FOTOS/Logo.webp" alt="Logo" width="50" height="auto" class="d-inline-block align-text-top">
                 SAEP - Prova
             </a>
-            <span>Bem-vindo, <%= nome %>!</span>
+            <span>Bem-vindo, <%= usuario ? usuario.nome : 'Visitante' %>!</span>
         </div>
     </nav>
     <!-- Conteúdo da página -->

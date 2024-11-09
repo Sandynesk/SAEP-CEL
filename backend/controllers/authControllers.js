@@ -33,14 +33,15 @@ exports.login = (req, res) => {
             // Gera o token JWT
             const token = jwt.sign({ userId: user.id, nome: user.nome }, 'seu-segredo-aqui', { expiresIn: '1h' });
 
+            // Armazena o nome do usuário na sessão
+            req.session.usuario = { id: user.id, nome: user.nome };  // Armazena a informação do usuário na sessão
+
             // Retorna a resposta com o token
-            res.json({
-                message: 'Login realizado com sucesso!',
-                token
-            });
+            res.redirect('/');  // Redireciona para a página inicial (home)
         });
     });
 };
+
 
 // Função de cadastro
 exports.cadastrar = (req, res) => {

@@ -27,8 +27,8 @@ app.use(express.static(path.join(__dirname, '../public')));  // Corrigido o cami
 
 // Rota para a home (renderiza home.ejs)
 app.get('/', (req, res) => {
-    const nome = req.session.usuario ? req.session.usuario.nome : 'Visitante';  // Exemplo com dados de sessão
-    res.render('home', { nome: nome });
+    const usuario = req.session.usuario || null;  // Obtém o usuário da sessão ou `null` se não houver usuário logado
+    res.render('home', { usuario });  // Passa o objeto `usuario` para a view EJS
 });
 
 // Rota para a página de cadastro
