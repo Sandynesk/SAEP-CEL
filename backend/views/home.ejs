@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAEP</title>
+    <title>Página Principal - SAEP</title>
     <link rel="stylesheet" href="Home.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="/public/JS/Login.js"></script>
+    
 </head>
 <body>
     <nav class="navbar navbar-custom">
@@ -15,16 +15,11 @@
                 <img src="/FOTOS/Logo.webp" alt="Logo" width="50" height="auto" class="d-inline-block align-text-top">
                 SAEP - Prova
             </a>
-            <div>
-                <span id="userName">Bem-vindo, visitante</span>
-            </div>
+            <span>Bem-vindo, <%= nome %>!</span>
         </div>
     </nav>
-    
- 
-
-    
-      <div id="carouselExampleDark" class="carousel carousel-dark slide">
+    <!-- Conteúdo da página -->
+    <div id="carouselExampleDark" class="carousel carousel-dark slide">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -167,10 +162,5 @@
           
         </div>
       </div>
-
-      <div id="userProfile">
-        <h1>Alguma competências</h1>
-      </div>
-
 </body>
 </html>

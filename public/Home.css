@@ -135,3 +135,10 @@ nav.navbar-custom .navbar-brand {
 }
 
 /* Estilo do botão personalizado */
+
+.container-fluid span{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+
+}
