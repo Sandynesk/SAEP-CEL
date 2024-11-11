@@ -9,8 +9,76 @@
 }
 
 body {
-    background: #654ea3;
-    background: linear-gradient(to right, #e96443, #904e95);
+    background: #0d00c5;
+    background: linear-gradient(to right, #06003b, #1100ff);
     min-height: 100vh;
     overflow-x:hidden;
 }
+
+
+/* Contêiner para os botões, para alinhá-los lado a lado */
+.btn-container {
+    display: flex;                          /* Usar Flexbox para alinhar os botões horizontalmente */
+    justify-content: space-between;          /* Deixa um espaço entre os botões */
+    width: 100%;                             /* Garantir que o contêiner ocupe toda a largura */
+  }
+  
+  /* Estilo do botão Edit Profile */
+  .btn-custom {
+    padding: 10px 20px;                     /* Espaçamento interno */
+    font-size: 16px;                        /* Tamanho da fonte */
+    font-weight: bold;                      /* Fonte em negrito */
+    text-align: center;                     /* Alinhar o texto ao centro */
+    text-decoration: none;                  /* Remover o sublinhado */
+    background-color: #3341ff;              /* Cor de fundo azul */
+    color: #fff;                            /* Cor do texto (branco) */
+    border-radius: 5px;                     /* Borda arredondada */
+    transition: all 0.3s ease;              /* Efeito suave para transições */
+    cursor: pointer;                       /* Cursor de mão para indicar que é clicável */
+    flex-grow: 1;                           /* Faz o botão crescer e ocupar a largura restante */
+    margin-right: 10px;                     /* Espaço entre os botões */
+  }
+  
+  /* Estilo do botão Edit Profile quando o mouse passar por cima (hover) */
+  .btn-custom:hover {
+    background-color: #000144;              /* Cor de fundo escura ao passar o mouse */
+    color: #ffffff;                         /* Cor do texto no hover (branco) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra no hover */
+  }
+  
+  /* Estilo do botão Edit Profile quando o botão for pressionado (active) */
+  .btn-custom:active {
+    background-color: #3c47e7;              /* Cor de fundo ao pressionar */
+    color: #fff;                            /* Cor do texto ao pressionar */
+    border-color: #6f3ce7;                  /* Cor da borda ao pressionar */
+  }
+  
+  /* Estilo do botão Sair */
+  .btn-logout {
+    padding: 10px 20px;                     /* Espaçamento interno */
+    font-size: 16px;                        /* Tamanho da fonte */
+    font-weight: bold;                      /* Fonte em negrito */
+    text-align: center;                     /* Alinhar o texto ao centro */
+    text-decoration: none;                  /* Remover o sublinhado */
+    background-color: #e74c3c;              /* Cor de fundo vermelha para o botão 'Sair' */
+    color: #fff;                            /* Cor do texto (branco) */
+    border-radius: 5px;                     /* Borda arredondada */
+    transition: all 0.3s ease;              /* Efeito suave para transições */
+    cursor: pointer;                       /* Cursor de mão para indicar que é clicável */
+    flex-grow: 1;                           /* Faz o botão crescer e ocupar a largura restante */
+  }
+  
+  /* Estilo do botão Sair quando o mouse passar por cima (hover) */
+  .btn-logout:hover {
+    background-color: #c0392b;              /* Cor de fundo escura ao passar o mouse */
+    color: #ffffff;                         /* Cor do texto no hover (branco) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra no hover */
+  }
+  
+  /* Estilo do botão Sair quando o botão for pressionado (active) */
+  .btn-logout:active {
+    background-color: #c0392b;              /* Cor de fundo ao pressionar */
+    color: #fff;                            /* Cor do texto ao pressionar */
+    border-color: #e74c3c;                  /* Cor da borda ao pressionar */
+  }
+  
