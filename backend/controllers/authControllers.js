@@ -65,6 +65,8 @@ exports.cadastrar = (req, res) => {
                 return res.status(500).json({ message: 'Erro ao cadastrar' });
             }
             res.status(201).json({ message: 'Cadastro realizado com sucesso!' });
+
+            res.redirect('/login');  // Redireciona para a página inicial (home)
         });
     });
 };

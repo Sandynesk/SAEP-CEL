@@ -15,9 +15,20 @@ CREATE TABLE posts (
     title VARCHAR(255) NOT NULL,              -- Título do post
     content TEXT NOT NULL,                    -- Conteúdo do post
     author_id INT,                            -- ID do autor (assumindo que você tem uma tabela de autores)
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP, -- Data e hora de criação do post (adicionada)
     FOREIGN KEY (author_id) REFERENCES cadastro(id)  -- Definindo chave estrangeira
 );
+
 
 -- Verifica os dados das tabelas
 SELECT * FROM cadastro;
 SELECT * FROM posts;
+DESCRIBE posts;
+
+ALTER TABLE posts
+ADD created_at DATETIME DEFAULT CURRENT_TIMESTAMP;
+
+SELECT p.id, p.title, p.content, p.created_at, u.nome AS author_name 
+FROM posts p 
+JOIN cadastro u ON p.author_id = u.id 
+ORDER BY p.created_at DESC;

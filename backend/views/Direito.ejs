@@ -87,68 +87,47 @@
           </div>
           
               <div class="clearfix mt-40">
-                  <ul class="xsearch-items">
-                      <li class="search-item">
+                <ul class="xsearch-items">
+                    <% if (posts && posts.length > 0) { %>
+                      <% posts.forEach(post => { %>
+                        <li class="search-item">
                           <div class="search-item-img">
-                              <a href="#">
-                                  <img src="/FOTOS/Icon.png" width="70" height="70">
-                              </a>
+                            <a href="#">
+                              <img src="/FOTOS/Icon.png" width="70" height="70">
+                            </a>
                           </div>
-
+                  
                           <div class="search-item-content">
                             <h3 class="search-item-caption">
-                              <a href="#" class="no-link" id="Escolha" style="margin-bottom: 10px;">Escolha a melhor universidade para o curso de Direito</a>
-                          </h3>
-                          
-                          <div class="search-item-meta mb-15">
-                            <ul class="list-inline">
-                                <li class="nome"><%= usuario ? usuario.nome : 'Usuario' %></li>
-                                <li class="time">Outubro 10, 2023</li>
+                              <a href="#" class="no-link" id="Escolha" style="margin-bottom: 10px;">
+                                <%= post.title %>
+                              </a>
+                            </h3>
+                            
+                            <div class="search-item-meta mb-15">
+                              <ul class="list-inline">
+                                <li class="nome"><%= post.author_name %></li>
+                                <li class="time"><%= new Date(post.created_at).toLocaleDateString() %></li>
                                 <li><a href="#" class="no-link">0 Comentários</a></li>
                                 <li class="pr-0">em</li>
                                 <li class="pl-0">
-                                    <a href="#" class="no-link">Direito</a>
+                                  <a href="#" class="no-link">Direito</a>
                                 </li>
-                            </ul>
-                        </div>
-                        
-                              <div>
-                                  Conheça as melhores universidades de Direito, escolha a que mais se encaixa com seus objetivos e comece sua jornada rumo a uma carreira de sucesso no campo jurídico.
-                              </div>
+                              </ul>
+                            </div>
+                  
+                            <div>
+                              <%= post.content %>
+                            </div>
                           </div>
-                      </li>
-    
-                      <li class="search-item">
-                          <div class="search-item-img">
-                              <a href="#">
-                                  <img itemprop="image" src="/FOTOS/Icon.png" width="70" height="70">
-                              </a>
-                          </div>
-                          <div class="search-item-content">
-                            <h3 class="search-item-caption">
-                              <a href="#" class="no-link">Prepare-se para direito com muitas experiências.</a>
-                          </h3>
-                          
-                          <div class="search-item-meta mb-15">
-                            <ul class="list-inline">
-                                <li class="nome"><%= usuario ? usuario.nome : 'Usuario' %></li>
-                                <li class="time">Outubro 10, 2023</li>
-                                <li><a href="#" class="no-link">0 Comentários</a></li>
-                                <li class="pr-0">em</li>
-                                <li class="pl-0">
-                                    <a href="#" class="no-link">Exames</a>, 
-                                    <a href="#" class="no-link">Preparação</a>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                              <div>
-                                  Aprenda como se preparar para os exames de Direito com materiais e recursos exclusivos para garantir a sua aprovação nos maiores exames da área.
-                              </div>
-                          </div>
-                      </li>
-    
+                        </li>
+                      <% }); %>
+                    <% } else { %>
+                      <li class="search-item">Nenhum post encontrado.</li>
+                    <% } %>
                   </ul>
+                  
+                  
               </div>
     
               <div class="row">

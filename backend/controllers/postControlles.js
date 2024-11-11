@@ -37,6 +37,32 @@ const criarPost = (req, res) => {
   });
 };
 
+// postControlles.js
+const listarPosts = (req, res) => {
+  const query = `
+    SELECT p.id, p.title, p.content, p.created_at, u.nome AS author_name 
+    FROM posts p 
+    JOIN cadastro u ON p.author_id = u.id 
+    ORDER BY p.created_at DESC
+  `;
+
+  db.query(query, (err, results) => {
+    if (err) {
+      return res.status(500).json({ message: 'Erro ao recuperar os posts', error: err });
+    }
+
+    const posts = results && results.length > 0 ? results : [];
+    const usuario = req.session.usuario || null;
+
+    return res.render('Direito', { posts, usuario });
+  });
+};
+
+
+
+
+
 module.exports = {
   criarPost,
+  listarPosts,
 };

@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const authRoutes = require('./routes/authRoutes'); // Importando as rotas de autenticação
 const postRoutes = require('./routes/postRoutes');
+const postController = require('./controllers/postControlles');
 
 const app = express();
 const port = 3001;
@@ -33,9 +34,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/direito', (req, res) => {
-    const usuario = req.session.usuario || null;  // Obtém o usuário da sessão ou `null` se não houver usuário logado
-    res.render('Direito', { usuario });
-});
+    postController.listarPosts(req, res);  // Apenas chama o controlador
+  });
 
 
 // Rota para a página de cadastro
