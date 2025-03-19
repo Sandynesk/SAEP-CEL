@@ -95,13 +95,13 @@ A landing page do sistema de apoio oferece as seguintes funcionalidades principa
 ### 3. **Instale as dependências e inicie o servidor com um único comando:**
    - Instale as dependências necessárias e inicie o servidor com:
      ```bash
-     npm install && npm start
+     npm install && npm run dev
      ```
 
 ### 4. **Acesse a aplicação no navegador:**
    - Depois de iniciar o servidor, você pode acessar a aplicação no seu navegador utilizando o seguinte endereço:
      ```bash
-     http://localhost:3000
+     http://localhost:3001
      ```
 
 ## Melhorias Futuras
