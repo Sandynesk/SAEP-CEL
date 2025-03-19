@@ -18,6 +18,23 @@ O Sistema de Apoio às Provas do SAEP foi desenvolvido com o intuito de ajudar e
    - **EJS (Embedded JavaScript)**: Utilizado para renderizar as páginas dinamicamente no backend, permitindo a injeção de dados diretamente nas views, o que facilita a atualização de conteúdos e interações com o banco de dados.
 
 
+## Tela Inicial
+
+![Tela Inicial do SAEP](public/FOTOS/Saep4.jpg)
+
+## Funcionalidade de Cursos
+
+![Tela Inicial do SAEP](public/FOTOS/Saep1.jpg)
+
+## Tela de Feedback
+
+![Tela Inicial do SAEP](public/FOTOS/Saep3.jpg)
+
+## Detalhamento do Curso
+
+![Tela Inicial do SAEP](public/FOTOS/Saep2.jpg)
+
+
 ## Funcionalidades
 A landing page do sistema de apoio oferece as seguintes funcionalidades principais:
 
